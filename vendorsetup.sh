@@ -1,0 +1,2 @@
+add_lunch_combo aosp_duk-userdebug
+add_lunch_combo aosp_stf-userdebug
