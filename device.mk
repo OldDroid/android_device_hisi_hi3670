@@ -73,7 +73,7 @@ PRODUCT_COPY_FILES += \
 
 # Security
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.build.version.security_patch=$(PLATFORM_SECURITY_PATCH)
+    ro.build.version.security_patch=2018-01-01
 
 # Telephony
 PRODUCT_COPY_FILES += \
