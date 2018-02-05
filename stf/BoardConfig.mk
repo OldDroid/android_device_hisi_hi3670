@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-include device/huawei/hi36xx/BoardConfigCommon.mk
+include device/hisi/hi3660/BoardConfigCommon.mk
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/stf/bluetooth

@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/huawei/hi36xx
+LOCAL_PATH := device/hisi/hi3660
 
 # Architecture
 TARGET_NO_BOOTLOADER := true
