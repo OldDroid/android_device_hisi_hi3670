@@ -78,3 +78,7 @@ PRODUCT_COPY_FILES += \
 # OmniClock
 PRODUCT_PACKAGES += \
     OmniClockOSS
+
+# Music
+PRODUCT_PACKAGES += \
+    Stardust
