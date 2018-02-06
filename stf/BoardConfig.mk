@@ -18,3 +18,6 @@ include device/hisi/hi3660/BoardConfigCommon.mk
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/stf/bluetooth
+
+# System size
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4915724288	# 4.8 GB
