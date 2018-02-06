@@ -82,3 +82,11 @@ PRODUCT_PACKAGES += \
 # Music
 PRODUCT_PACKAGES += \
     Stardust
+
+# Camera Ui Sound
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/system/media/audio/ui/camera_click.ogg:system/media/audio/ui/camera_click.ogg \
+    $(LOCAL_PATH)/prebuilt/system/media/audio/ui/camera_focus.ogg:system/media/audio/ui/camera_focus.ogg \
+    $(LOCAL_PATH)/prebuilt/system/media/audio/ui/VideoPause.ogg:system/media/audio/ui/VideoPause.ogg \
+    $(LOCAL_PATH)/prebuilt/system/media/audio/ui/VideoRecordEnd.ogg:system/media/audio/ui/VideoRecordEnd.ogg \
+    $(LOCAL_PATH)/prebuilt/system/media/audio/ui/WaterWarning.ogg:system/media/audio/ui/WaterWarning.ogg
