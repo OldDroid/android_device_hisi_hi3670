@@ -14,5 +14,10 @@
 # limitations under the License.
 #
 
+# No Soft Key 
 PRODUCT_PROPERTY_OVERRIDES += \
     qemu.hw.mainkeys=1
+
+# Google Bootanimation
+PRODUCT_COPY_FILES += \
+    device/hisi/hi3660/stf/system/media/bootanimation.zip:system/media/bootanimation.zip
