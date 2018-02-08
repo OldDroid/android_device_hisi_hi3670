@@ -14,10 +14,6 @@
 # limitations under the License.
 #
 
-# No Soft Key 
-PRODUCT_PROPERTY_OVERRIDES += \
-    qemu.hw.mainkeys=1
-
 # Google Bootanimation
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/stf/prebuilt/system/media/bootanimation.zip:system/media/bootanimation.zip
+    $(LOCAL_PATH)/duk/prebuilt/system/media/bootanimation.zip:system/media/bootanimation.zip

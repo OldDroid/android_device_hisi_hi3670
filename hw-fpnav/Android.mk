@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 Team OpenKirin
+# Copyright (C) 2018 phhusson, Team OpenKirin
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,10 +14,13 @@
 # limitations under the License.
 #
 
-# No Soft Key 
-PRODUCT_PROPERTY_OVERRIDES += \
-    qemu.hw.mainkeys=1
+LOCAL_PATH := $(call my-dir)
 
-# Google Bootanimation
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/stf/prebuilt/system/media/bootanimation.zip:system/media/bootanimation.zip
+include $(CLEAR_VARS)
+LOCAL_MODULE := hw-fpnav-daemon
+LOCAL_SRC_FILES := input.cpp
+LOCAL_CLANG := true
+LOCAL_CFLAGS := -Wall -Werror -Wextra
+LOCAL_INIT_RC := hw-fingerprint.rc
+LOCAL_MODULE_TAGS := optional
+include $(BUILD_EXECUTABLE)

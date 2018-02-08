@@ -27,6 +27,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 # Device makefile
 $(call inherit-product, $(LOCAL_PATH)/charger.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
+$(call inherit-product, $(LOCAL_PATH)/duk/duk.mk)
 
 # Identifiers
 PRODUCT_BRAND := honor
