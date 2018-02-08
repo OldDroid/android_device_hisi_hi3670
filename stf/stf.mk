@@ -20,4 +20,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Google Bootanimation
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/stf/prebuilt/system/media/bootanimation.zip:system/media/bootanimation.zip
+    $(LOCAL_PATH)/prebuilt/system/media/bootanimation.zip:system/media/bootanimation.zip
