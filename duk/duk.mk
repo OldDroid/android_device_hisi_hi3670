@@ -16,4 +16,4 @@
 
 # Google Bootanimation
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/duk/prebuilt/system/media/bootanimation.zip:system/media/bootanimation.zip
+    $(LOCAL_PATH)/prebuilt/system/media/bootanimation.zip:system/media/bootanimation.zip

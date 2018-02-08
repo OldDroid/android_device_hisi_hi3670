@@ -31,39 +31,6 @@
 #define FINGERPRINT_DOWN	0x6c
 #define FINGERPRINT_DOUBLECLICK 0x6f
 
-int main() {
-    int fd = open_fingerprint();
-    if(fd<0) return 1;
-
-    struct input_event ev;
-    while(read(fd, &ev, sizeof(ev)) == sizeof(ev)) {
-	if(ev.type != EV_KEY) continue;
-	//Huawei kernel code automatically generates both up and down events, just take one
-	if(ev.value != 1) continue; 
-
-	switch(ev.code) {
-	    case FINGERPRINT_CLICK:
-		system("input keyevent KEYCODE_HOME &");
-		break;
-	    case FINGERPRINT_LEFT:
-		system("input keyevent KEYCODE_BACK &");
-		break;
-	    case FINGERPRINT_RIGHT:
-		system("input keyevent KEYCODE_VOICE_ASSIST &");
-		break;
-	    case FINGERPRINT_UP:
-		system("cmd statusbar expand-settings &");
-		break;
-	    case FINGERPRINT_DOWN:
-		system("cmd statusbar expand-notifications &");
-		break;
-	    case FINGERPRINT_LONGPRESS:
-		system("input keyevent KEYCODE_APP_SWITCH &");
-		break;
-	};
-    }
-}
-
 int open_fingerprint() {
     DIR *dir=opendir("/dev/input");
     if(!dir) {
@@ -100,4 +67,37 @@ int open_fingerprint() {
     }
     closedir(dir);
     return -1;
+}
+
+int main() {
+    int fd = open_fingerprint();
+    if(fd<0) return 1;
+
+    struct input_event ev;
+    while(read(fd, &ev, sizeof(ev)) == sizeof(ev)) {
+	if(ev.type != EV_KEY) continue;
+	//Huawei kernel code automatically generates both up and down events, just take one
+	if(ev.value != 1) continue; 
+
+	switch(ev.code) {
+	    case FINGERPRINT_CLICK:
+		system("input keyevent KEYCODE_HOME &");
+		break;
+	    case FINGERPRINT_LEFT:
+		system("input keyevent KEYCODE_BACK &");
+		break;
+	    case FINGERPRINT_RIGHT:
+		system("input keyevent KEYCODE_VOICE_ASSIST &");
+		break;
+	    case FINGERPRINT_UP:
+		system("cmd statusbar expand-settings &");
+		break;
+	    case FINGERPRINT_DOWN:
+		system("cmd statusbar expand-notifications &");
+		break;
+	    case FINGERPRINT_LONGPRESS:
+		system("input keyevent KEYCODE_APP_SWITCH &");
+		break;
+	};
+    }
 }

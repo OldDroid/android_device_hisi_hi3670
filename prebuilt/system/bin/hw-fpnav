@@ -1,0 +1,5 @@
+#!/system/bin/sh
+set -x
+
+#Start input redirector
+/system/bin/hw-fpnav-daemon
