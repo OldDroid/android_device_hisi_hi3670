@@ -20,6 +20,11 @@ DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/bt_did.conf:system/etc/bluetooth/bt_did.conf
 
+# Busybox
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/system/xbin/busybox:system/xbin/busybox \
+    $(LOCAL_PATH)/prebuilt/system/xbin/ssl_helper:system/xbin/ssl_helper
+
 # Display
 PRODUCT_PACKAGES += \
     libion
