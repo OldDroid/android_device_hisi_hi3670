@@ -22,8 +22,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/treble_common.mk)
 
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-
 # Device makefile
 $(call inherit-product, $(LOCAL_PATH)/charger.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
