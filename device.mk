@@ -32,11 +32,12 @@ PRODUCT_PACKAGES += \
 
 # FPS
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
-    $(LOCAL_PATH)/prebuilt/system/bin/hw-fpnav:system/bin/hw-fpnav
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 
 PRODUCT_PACKAGES += \
-    hw-fpnav-daemon
+    hw-fpnav-daemon \
+    hw-fpnav \
+    hw-fpnav.dex
 
 # Huawei Camera
 PRODUCT_PACKAGES += \

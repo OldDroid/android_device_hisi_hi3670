@@ -22,3 +22,16 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .apk
 LOCAL_MODULE_CLASS := APPS
 include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := system/bin/hw-fpnav
+LOCAL_MODULE := hw-fpnav
+LOCAL_MODULE_CLASS := EXECUTABLES
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := hw-fpnav.dex
+LOCAL_MODULE_TAGS := optional eng
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES := system/etc/hw-fpnav.dex
+include $(BUILD_PREBUILT)
