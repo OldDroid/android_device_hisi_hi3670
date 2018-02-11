@@ -101,3 +101,10 @@ PRODUCT_COPY_FILES += \
 # Override device name
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=hi3660
+
+# Su
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/system/xbin/su:system/xbin/su
+
+PRODUCT_PACKAGES += \
+    phh-su
