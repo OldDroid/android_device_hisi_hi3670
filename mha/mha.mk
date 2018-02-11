@@ -14,7 +14,6 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_duk.mk \
-    $(LOCAL_DIR)/aosp_mha.mk \
-    $(LOCAL_DIR)/aosp_stf.mk
+# Google Bootanimation
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/system/media/bootanimation.zip:system/media/bootanimation.zip

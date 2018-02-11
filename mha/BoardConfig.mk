@@ -14,7 +14,10 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_duk.mk \
-    $(LOCAL_DIR)/aosp_mha.mk \
-    $(LOCAL_DIR)/aosp_stf.mk
+include device/hisi/hi3660/BoardConfigCommon.mk
+
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/mha/bluetooth
+
+# System size
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4915724288	# 4.8 GB
