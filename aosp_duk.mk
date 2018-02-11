@@ -23,7 +23,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/treble_common.mk)
 
 # Device makefile
-$(call inherit-product, $(LOCAL_PATH)/charger.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 $(call inherit-product, $(LOCAL_PATH)/duk/duk.mk)
 

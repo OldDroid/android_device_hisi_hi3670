@@ -16,14 +16,9 @@
 
 DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 
-# Bluetooth
+# all prebuild needed
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/bt_did.conf:system/etc/bluetooth/bt_did.conf
-
-# Busybox
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/system/xbin/busybox:system/xbin/busybox \
-    $(LOCAL_PATH)/prebuilt/system/xbin/ssl_helper:system/xbin/ssl_helper
+	$(call find-copy-subdir-files,*,device/hisi/hi3660/sys/,system/)
 
 # Display
 PRODUCT_PACKAGES += \
@@ -40,9 +35,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml
 
 PRODUCT_PACKAGES += \
-    hw-fpnav-daemon \
-    hw-fpnav \
-    hw-fpnav.dex
+    hw-fpnav-daemon
 
 # Huawei Camera
 PRODUCT_PACKAGES += \
@@ -56,10 +49,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NfcNci \
     nfc_nci.pn54x.default
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -90,21 +79,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
-# Camera Ui Sound
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/system/media/audio/ui/camera_click.ogg:system/media/audio/ui/camera_click.ogg \
-    $(LOCAL_PATH)/prebuilt/system/media/audio/ui/camera_focus.ogg:system/media/audio/ui/camera_focus.ogg \
-    $(LOCAL_PATH)/prebuilt/system/media/audio/ui/VideoPause.ogg:system/media/audio/ui/VideoPause.ogg \
-    $(LOCAL_PATH)/prebuilt/system/media/audio/ui/VideoRecordEnd.ogg:system/media/audio/ui/VideoRecordEnd.ogg \
-    $(LOCAL_PATH)/prebuilt/system/media/audio/ui/WaterWarning.ogg:system/media/audio/ui/WaterWarning.ogg
-
 # Override device name
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=hi3660
-
-# Su
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/system/xbin/su:system/xbin/su
 
 PRODUCT_PACKAGES += \
     phh-su
