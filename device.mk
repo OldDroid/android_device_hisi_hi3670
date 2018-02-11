@@ -18,7 +18,7 @@ DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 
 # all prebuild needed
 PRODUCT_COPY_FILES += \
-	$(call find-copy-subdir-files,*,device/hisi/hi3660/sys/,system/)
+    $(call find-copy-subdir-files,*,device/hisi/hi3660/sys/,system/)
 
 # Display
 PRODUCT_PACKAGES += \
