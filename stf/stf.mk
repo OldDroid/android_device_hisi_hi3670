@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/stf/overlay
+
 # No Soft Key 
 PRODUCT_PROPERTY_OVERRIDES += \
     qemu.hw.mainkeys=1
