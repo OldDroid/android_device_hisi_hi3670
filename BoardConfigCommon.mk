@@ -53,6 +53,8 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # Display
+TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
+TARGET_USE_PAN_DISPLAY=true
 TARGET_USES_HWC2 := true
 
 # FS

@@ -20,6 +20,10 @@ DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/bt_did.conf:system/etc/bluetooth/bt_did.conf
 
+# Display
+PRODUCT_PACKAGES += \
+    libion
+
 # Extra packages
 PRODUCT_PACKAGES += \
     Launcher3 \
