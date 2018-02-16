@@ -16,10 +16,6 @@
 
 DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
 
-# all prebuild needed
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/hisi/hi3660/system/,system/)
-
 # Display
 PRODUCT_PACKAGES += \
     libion
@@ -81,7 +77,4 @@ PRODUCT_COPY_FILES += \
 
 # Override device name
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=hi3660
-
-PRODUCT_PACKAGES += \
-    phh-su
+    TARGET_DEVICE=hi3670

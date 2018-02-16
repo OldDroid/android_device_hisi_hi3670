@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/hisi/hi3660
+LOCAL_PATH := device/hisi/hi3670
 
 # Architecture
 TARGET_NO_BOOTLOADER := true
@@ -72,7 +72,7 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 # Sepolicy
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-	device/hisi/hi3660/sepolicy
+	device/hisi/hi3670/sepolicy
 
 # Vendor
 BOARD_USES_VENDORIMAGE := true

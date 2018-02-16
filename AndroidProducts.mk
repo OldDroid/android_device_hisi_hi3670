@@ -15,6 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_duk.mk \
-    $(LOCAL_DIR)/aosp_mha.mk \
-    $(LOCAL_DIR)/aosp_stf.mk
+    $(LOCAL_DIR)/aosp_bkl.mk
